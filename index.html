@@ -7,22 +7,22 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
-<body class="container">
+<body class="container w-100 h-100">
     <h1 class="mt-5">IBGE</h1>
     <hr>
 
     <form action="">
         <label for="regiao">Região: </label>
-        <select id="regiao" class="form-control mb-3">
-            <option disabled>--Selecione--</option>
+        <select id="regiao" class="form-control mb-3" onchange="escolher_estado()">
+            <option selected>--Selecione--</option>
         </select>
         <label for="uf">Estado: </label>
-        <select id="uf" class="form-control mb-3">
-            <option disabled>--Selecione--</option>
+        <select id="uf" class="form-control mb-3" onchange="escolher_cidade()">
+            <option selected>--Selecione--</option>
         </select>
         <label for="cidade">Cidade: </label>
         <select id="cidade" class="form-control mb-3">
-            <option disabled>--Selecione--</option>
+            <option selected>--Selecione--</option>
         </select>
     </form>
     <script src="index.js"></script>
