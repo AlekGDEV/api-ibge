@@ -24,7 +24,7 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/regioes')
     }
 
     function escolher_cidade(){
-        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf.value}/distritos`)
+        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf.value}/municipios`)
             .then((resposta) => resposta.json())
             .then((cidades) =>{
                 cidade.innerHTML = '';
