@@ -13,6 +13,7 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/regioes')
         fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/regioes/${regiao.value}/estados`)
             .then((resposta) => resposta.json())
             .then((ufs) => {
+                uf.innerHTML = '';
                 ufs.forEach((cada_uf) => {
                     uf.innerHTML +=
                     `
@@ -26,6 +27,7 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/regioes')
         fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf.value}/distritos`)
             .then((resposta) => resposta.json())
             .then((cidades) =>{
+                cidade.innerHTML = '';
                 cidades.forEach((cada_cidade) =>{
                     cidade.innerHTML +=
                     `
